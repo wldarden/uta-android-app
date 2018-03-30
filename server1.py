@@ -1,7 +1,6 @@
 
 ''' Priyam Banerjee
-    UTA ID : 1001529497
-    OS Assignment 4
+    MS Student at University of Texas at Arlington
     Local Server-Client interaction. File encryption done using 'pyaes'
     (Python AES Encryption).
     Reference : github.com, stackoverflow.com
