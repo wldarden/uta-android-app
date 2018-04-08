@@ -1,6 +1,6 @@
 ### uta-android-app
 Android app for a catering service
-##Initialize the repsoitory
+## Initialize the repsoitory
 git clone https://github.com/wldarden/uta-android-app.git
 ## To develop a new feature
 1. checkout and pull dev branch to get the most recent working version of code.
