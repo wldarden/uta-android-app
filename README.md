@@ -4,7 +4,11 @@ Android app for a catering service
 git clone https://github.com/wldarden/uta-android-app.git
 ## To develop a new feature
 1. checkout and pull dev branch to get the most recent working version of code.
-2. "git checkout -b \<newBranchName\>" will create a branch and check it out.
+2. 
+-----
+"git checkout -b \<newBranchName\>" 
+-----
+will create a branch and check it out.
 3. develop your code
 4. Try to use commit messages. It will help later if theres problems I promise.
   this command will add all modified files, and take a commit message as an argument:
