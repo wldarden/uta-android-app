@@ -9,7 +9,7 @@ git clone https://github.com/wldarden/uta-android-app.git
 4. Try to use commit messages. It will help later if theres problems I promise.
   this command will add all modified files, and take a commit message as an argument:
   git commit -am "added guide for git commits to the readme"
-5. git push. you will probably need to do "git push --set-upstream origin <newBranchName>"
+5. git push. you will probably need to do "git push --set-upstream origin \<newBranchName\>"
 ## To merge your feature into dev branch
 1. make sure you pull any new additions to dev branch by other people since you branched off it. just checkut dev and pull, then checkout your feature branch again.
 2. merge dev into your branch if there were any changes using this command while you have your feature branch checked out:
