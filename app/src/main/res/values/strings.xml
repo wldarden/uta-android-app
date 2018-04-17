@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Group2project</string>
+    <string name="app_name">App Name</string>
     <string name="emptyString"></string>
     <string-array name="UserRoleDropDown">
         <item>User</item>
