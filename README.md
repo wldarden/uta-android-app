@@ -2,6 +2,9 @@
 Android app for a catering service
 ## Initialize the repsoitory
 git clone https://github.com/wldarden/uta-android-app.git
+## Modifying project to work on your computer
+1. change the local.properties file to point to your sdk
+
 ## To develop a new feature
 1. checkout and pull dev branch to get the most recent working version of code.
 2. "git checkout -b \<newBranchName\>" will create a branch and check it out.
