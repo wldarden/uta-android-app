@@ -4,8 +4,10 @@ package com.example.willdarden.group2project;
  * Created by Will Darden on 4/16/2018.
  */
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -43,6 +45,7 @@ public class activity_event_list extends AppCompatActivity {
         // DataBind ListView with items from ArrayAdapter
         lv.setAdapter(arrayAdapter);
 
+
 //        // Get reference of widgets from XML layout
 //        final ListView lv = (ListView) findViewById(R.id.lv);
 //
@@ -58,5 +61,14 @@ public class activity_event_list extends AppCompatActivity {
 //        // DataBind ListView with items from ArrayAdapter
 //        arrayAdapter.add("pizza");
 //        lv.setAdapter(arrayAdapter);
+    }
+
+    public void onButtonClick(View view){
+
+        if(view.getId() == R.id.LogoutBtn){
+            Intent intent = new Intent(this, LoginScreen.class);
+            startActivity(intent);
+        }
+
     }
 }
