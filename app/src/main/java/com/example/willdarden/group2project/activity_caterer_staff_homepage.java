@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -19,10 +20,20 @@ import java.util.List;
 
 public class activity_caterer_staff_homepage extends AppCompatActivity {
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_caterer_staff_homepage);
+
+        String userName = getIntent().getStringExtra("LOGINID");
+        TextView tv = (TextView)findViewById(R.id.tvUsername);
+        tv.setText(userName);
+    }
+
     public void onButtonClick(View view){
         if(view.getId() == R.id.CatererStaffMyEventsBtn){
             Intent intent = new Intent(this, activity_event_list.class);
-//            intent.putExtra("LOGINID", LoginId_Str);
+//            intent.putExtra("LOGINID", userName);
             startActivity(intent);
         }
 

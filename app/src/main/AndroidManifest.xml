@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity_registration_screen" />
+        <activity android:name=".activity_caterer_staff_homepage" />
         <activity android:name=".admin_home_screen" />
         <activity android:name=".activity_update_profile"></activity>
     </application>
