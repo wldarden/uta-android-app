@@ -39,9 +39,17 @@ public class LoginScreen extends AppCompatActivity implements AdapterView.OnItem
 
             String PasswordVar = helper.searchPassword(LoginId_Str , userRoleSelected);
             if(Password_Str.equals(PasswordVar)) {
-                Intent intent = new Intent(LoginScreen.this, admin_home_screen.class);
-                intent.putExtra("LOGINID", LoginId_Str);
-                startActivity(intent);
+                System.out.println(userRoleSelected);
+                System.out.println(userRoleSelected.equals("Caterer Staff"));
+                if (userRoleSelected.equals("Caterer Staff")) {
+                    Intent intent = new Intent(LoginScreen.this, activity_caterer_staff_homepage.class);
+                    intent.putExtra("LOGINID", LoginId_Str);
+                    startActivity(intent);
+                } else if (userRoleSelected.equals("Administrator")) {
+                    Intent intent = new Intent(LoginScreen.this, admin_home_screen.class);
+                    intent.putExtra("LOGINID", LoginId_Str);
+                    startActivity(intent);
+                }
             }
             else{
                 Toast toast = Toast.makeText(LoginScreen.this , "Incorrect Login, Password or User Role" , Toast.LENGTH_LONG);
