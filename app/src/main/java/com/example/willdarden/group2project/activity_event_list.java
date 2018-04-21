@@ -68,7 +68,6 @@ public class activity_event_list extends AppCompatActivity {
         if(view.getId() == R.id.LogoutBtn){
             Intent intent = new Intent(this, LoginScreen.class);
             startActivity(intent);
-
         }
 
     }
