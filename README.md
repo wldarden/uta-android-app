@@ -49,7 +49,7 @@ are annoying. this is what they look like:
 
 [this part contains the version of code that exists in the origin on the github servers]
 
->>>>>>>>>>>BranchName"
+">>>>>>>>>>>BranchName"
 
 most of the time you want whats in the head. which means you would delete the bottom half of that
 segment. Look at each conflict on a case by case basis though. Regression errors are COMMON in merge
