@@ -8,24 +8,35 @@ to pull the current version of the current branch from the origin:
 git pull
 
 to checkout an existing branch:
+
 git checkout <branchName>
+
 to create and checkout a new branch:
+
 git checkout -b <branchName>
 
 to see what branch you are on, and if you have uncommited modified files, and other info:
+
 git status
 
 to commit changes:
+
 git commit -am "you need to have these quotes around this commit message or it wont work"
+
 (above, the -a adds all the modified files to the commit for you)
 
 to push changes to the back end:
+
 git push
+
 the first time you push you will have to do this:
+
 git push --set-upsteam origin <yourBranchName>
 
 to merge changes from one branch to another:
+
 git merge <otherBranchName>
+
 this will merge <otherBranchName> into the branch you are on right now. to see what branch you are on, use git status.
 
 ## common problems in the above flow:
