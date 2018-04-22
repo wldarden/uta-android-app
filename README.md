@@ -2,24 +2,54 @@
 Android app for a catering service
 ## Initialize the repsoitory
 git clone https://github.com/wldarden/uta-android-app.git
-## Modifying project to work on your computer
-1. change the local.properties file to point to your sdk
 
-## To develop a new feature
-1. checkout and pull dev branch to get the most recent working version of code.
-2. "git checkout -b \<newBranchName\>" will create a branch and check it out.
-3. develop your code
-4. Try to use commit messages. It will help later if theres problems I promise.
-  this command will add all modified files, and take a commit message as an argument:
-  git commit -am "added guide for git commits to the readme"
-5. git push. you will probably need to do "git push --set-upstream origin \<newBranchName\>"
-## To merge your feature into dev branch
-1. make sure you pull any new additions to dev branch by other people since you branched off it. just checkut dev and pull, then checkout your feature branch again.
-2. merge dev into your branch if there were any changes using this command while you have your feature branch checked out:
-  git merge dev
-3. If there are merge conflicts, fix them here. the output will tell you where the conflicts are. 
-4. commit and push the merge conflicts if you had any. then go to the github page. 
-5. Open a new pull request. choose dev on the left dropdown and your branch on the right dropdown. if there are no conflicts found, you'll be able to merge it in. try to use squash and merge, it will make the commit history a little cleaner, but it's not required.
-## Restriction on commiting to the project
-dev is the main branch, it will hold the most up to date version of the code. We won't be able to push directly to dev. The only way to get code into dev is through a pull request. This will force us to integrate our features with dev on the feature branch, keeping dev branch clean.
+##git commands
+to pull the current version of the current branch from the origin:
+git pull
+
+to checkout an existing branch:
+git checkout <branchName>
+to create and checkout a new branch:
+git checkout -b <branchName>
+
+to see what branch you are on, and if you have uncommited modified files, and other info:
+git status
+
+to commit changes:
+git commit -am "you need to have these quotes around this commit message or it wont work"
+(above, the -a adds all the modified files to the commit for you)
+
+to push changes to the back end:
+git push
+the first time you push you will have to do this:
+git push --set-upsteam origin <yourBranchName>
+
+to merge changes from one branch to another:
+git merge <otherBranchName>
+this will merge <otherBranchName> into the branch you are on right now. to see what branch you are on, use git status.
+
+##common problems in the above flow:
+# the origin contains commits that you do not have locally
+If you try to push, but get an error comes up saying there are changes you dont have yet. This means
+someone pushed to this branch in between when you last pulled and now. just git pull again. it will
+likely auto merge and you can imediately git push after that. If Vim pops up with hashtags all down the screen,
+just hit escape once, and then type :wq and hit enter. the : means you are giving it a command, the w
+means write, and q stands for quit. basically you are just giving a blank commit message to the merge
+you just did. after that, git push.
+
+#merge conflicts
+are annoying. this is what they look like:
+<<<<<<<<<<<Head
+[this part contains the version of the code that you just wrote on your new branch]
+==========
+[this part contains the version of code that exists in the origin on the github servers]
+>>>>>>>>>>>BranchName
+most of the time you want whats in the head. which means you would delete the bottom half of that
+segment. Look at each conflict on a case by case basis though. Regression errors are COMMON in merge
+conflicts, so take a second to see which segment of code is the one you want in the final version you
+ are about to push.
+ most of the time its either all the top and none of the bottom or vice versa, but sometimes youll want
+ a few lines from each.
+
+ after you resolve merge conflicts, you will have to commit and push again.
 
