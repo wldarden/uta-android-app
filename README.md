@@ -60,3 +60,12 @@ conflicts, so take a second to see which segment of code is the one you want in 
 
  after you resolve merge conflicts, you will have to commit and push again.
 
+## You try to checkout another branch but there are unsaved changes on your current branch
+do a git status to see what files are modified. If those are not changes you want to keep,
+just do git stash to reset the branch back to the last commit. now you can git checkout.
+
+if you wanted to apply those changes to a different branch, do git stash, and then checkout the branch
+you want those changes on. then do git stash pop. git will try to automatically apply the changes.
+
+in rare cases, you might have to do git reset --hard origin. this will forget any local changes permanently
+and set the branch back to what the origin has.
