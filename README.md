@@ -37,13 +37,20 @@ just hit escape once, and then type :wq and hit enter. the : means you are givin
 means write, and q stands for quit. basically you are just giving a blank commit message to the merge
 you just did. after that, git push.
 
-###merge conflicts:
+### merge conflicts:
+
 are annoying. this is what they look like:
-<<<<<<<<<<<Head
+
+"<<<<<<<<<<<Head
+
 [this part contains the version of the code that you just wrote on your new branch]
+
 ==========
+
 [this part contains the version of code that exists in the origin on the github servers]
->>>>>>>>>>>BranchName
+
+>>>>>>>>>>>BranchName"
+
 most of the time you want whats in the head. which means you would delete the bottom half of that
 segment. Look at each conflict on a case by case basis though. Regression errors are COMMON in merge
 conflicts, so take a second to see which segment of code is the one you want in the final version you
