@@ -3,7 +3,7 @@ Android app for a catering service
 ## Initialize the repsoitory
 git clone https://github.com/wldarden/uta-android-app.git
 
-##git commands
+## git commands
 to pull the current version of the current branch from the origin:
 git pull
 
