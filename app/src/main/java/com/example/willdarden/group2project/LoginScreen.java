@@ -38,6 +38,7 @@ public class LoginScreen extends AppCompatActivity implements AdapterView.OnItem
             //String Role_Str = role.getText().toString();
 
             String PasswordVar = helper.searchPassword(LoginId_Str , userRoleSelected);
+            System.out.println(userRoleSelected);
             if(Password_Str.equals(PasswordVar)) {
                 if (userRoleSelected.equals("Caterer Staff")) {
                     Intent intent = new Intent(LoginScreen.this, activity_caterer_staff_homepage.class);
@@ -45,6 +46,10 @@ public class LoginScreen extends AppCompatActivity implements AdapterView.OnItem
                     startActivity(intent);
                 } else if (userRoleSelected.equals("Administrator")) {
                     Intent intent = new Intent(LoginScreen.this, admin_home_screen.class);
+                    intent.putExtra("LOGINID", LoginId_Str);
+                    startActivity(intent);
+                } else if (userRoleSelected.equals("Caterer")) {
+                    Intent intent = new Intent(LoginScreen.this, CaterHomepage.class);
                     intent.putExtra("LOGINID", LoginId_Str);
                     startActivity(intent);
                 }
