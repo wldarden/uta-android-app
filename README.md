@@ -28,8 +28,8 @@ to merge changes from one branch to another:
 git merge <otherBranchName>
 this will merge <otherBranchName> into the branch you are on right now. to see what branch you are on, use git status.
 
-##common problems in the above flow:
-# the origin contains commits that you do not have locally
+## common problems in the above flow:
+### the origin contains commits that you do not have locally
 If you try to push, but get an error comes up saying there are changes you dont have yet. This means
 someone pushed to this branch in between when you last pulled and now. just git pull again. it will
 likely auto merge and you can imediately git push after that. If Vim pops up with hashtags all down the screen,
@@ -37,7 +37,7 @@ just hit escape once, and then type :wq and hit enter. the : means you are givin
 means write, and q stands for quit. basically you are just giving a blank commit message to the merge
 you just did. after that, git push.
 
-#merge conflicts
+###merge conflicts:
 are annoying. this is what they look like:
 <<<<<<<<<<<Head
 [this part contains the version of the code that you just wrote on your new branch]
