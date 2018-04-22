@@ -28,14 +28,12 @@ public class activity_registration_screen extends AppCompatActivity implements A
         if(view.getId() == R.id.btnRegisterRegtnScreen){
             EditText loginid = (EditText)findViewById(R.id.etLoginIdRegtnScreen);
             EditText username = (EditText)findViewById(R.id.etUsernameRegtnScreen);
-            //EditText role = (EditText)findViewById(R.id.etRoleRegtnScreen);
             EditText email = (EditText)findViewById(R.id.etEmailRegtnScreen);
             EditText phonenum = (EditText)findViewById(R.id.etPhoneRegtnScreen);
             EditText password = (EditText)findViewById(R.id.etPwdRegtnScreen);
             EditText confrmpassword = (EditText)findViewById(R.id.etCnfrmPwdRegtnScreen);
             String loginid_str = loginid.getText().toString();
             String username_str = username.getText().toString();
-            //String role_str = role.getText().toString();
             String email_str = email.getText().toString();
             String phonenum_str = phonenum.getText().toString();
             String pwd_str = password.getText().toString();

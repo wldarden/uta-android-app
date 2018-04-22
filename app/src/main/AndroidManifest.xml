@@ -21,6 +21,13 @@
         <activity android:name=".admin_home_screen" />
         <activity android:name=".activity_event_list" />
         <activity android:name=".activity_update_profile"></activity>
+        <activity android:name=".CaterHomepage"/>
+        <activity android:name=".CatererEventList" />
+        <activity android:name=".EventNameEnterPage" />
+        <activity android:name=".EventDetailPage" />
+        <activity android:name=".CatererFuctionList" />
+        <activity android:name=".CatererPickUpDatePage" />
+        <activity android:name=".CatererCalendarEventView" />
     </application>
 
 </manifest>
