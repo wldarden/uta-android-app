@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CateringApp</string>
+    <string name="welcome_caterer">Welcome Caterer!</string>
+    <string name="caterer_event_list">caterer event list</string>
+    <string name="caterer_function_list">caterer function list</string>
+    <string name="logout">logout</string>
+    <string name="caterer_event_list_fuctionpage">Caterer Event List</string>
+    <string name="schedule_a_place_fuctionpage">schedule a place</string>
+    <string name="view_event_detail_fuctionpage">view event detail</string>
+    <string name="caterer_event_list_enterpage">Caterer Event List</string>
+    <string name="enter_an_event_to_continue">Enter an event to continue</string>
+    <string name="event_name">Event Name</string>
+    <string name="go">go!</string>
+    <string name="textview_EventDetail">TextView</string>
+</resources>
