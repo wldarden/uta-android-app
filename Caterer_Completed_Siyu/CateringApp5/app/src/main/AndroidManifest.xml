@@ -22,7 +22,11 @@
         <activity android:name=".CatererFuctionList" />
         <activity android:name=".CatererPickUpDatePage" />
         <activity android:name=".CatererCalendarEventView" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".CatererSchedulePlaceForEvent" />
+        <activity android:name=".AssignStaffToEvent" />
+        <activity android:name=".CatererEventCreation" />
+        <activity android:name=".AddResources"></activity>
     </application>
 
 </manifest>
