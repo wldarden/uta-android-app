@@ -93,6 +93,71 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         this.sqliteDB = sqLiteDatabase;
     }
 
+    public boolean updateHallName(String EventName,String HallName){
+        sqliteDB = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(Cater10_Venue, HallName);
+
+
+        int i = sqliteDB.update("EVENTREQUESTS",values,"EventName=?",new String[]{EventName});
+        if(i==1){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
+
+    public boolean updateStaffNumber(String EventName,String StaffNum){
+        sqliteDB = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(Cater12_Staff, StaffNum);
+
+
+        int i = sqliteDB.update("EVENTREQUESTS",values,"EventName=?",new String[]{EventName});
+        if(i==1){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+    ////////////////////////////
+    public boolean CatererCreateEvent(String EventName,String eventTime){
+        sqliteDB = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(Cater12_Staff, eventTime);
+
+
+        int i = sqliteDB.update("EVENTREQUESTS",values,"EventName=?",new String[]{EventName});
+        if(i==1){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
+    public boolean CatererAddResources(String EventName, String MealType , String FoodVenue, String MealFormality, String DrinkVenue){
+        sqliteDB = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        //values.put(Cater1_EventName , EventName);
+        values.put(Cater6_MealType,MealType);
+        values.put(Cater7_MealVenue,FoodVenue);
+        values.put(Cater8_MealFormality,MealFormality);
+        values.put(Cater9_DrinkVenue,DrinkVenue);
+
+
+        int i = sqliteDB.update("EVENTREQUESTS",values,"EventName=?",new String[]{EventName});
+        if(i==1){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     public long insertContact_Cater(String EventName, String PartySize ,String EventDate , String EventTime ,String EventDuration
             , String MealType , String MealVenue, String MealFormality, String DrinkVenue, String Venue, String Cost, String Staff , String Username){
 

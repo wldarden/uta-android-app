@@ -15,7 +15,8 @@ public class CatererEventList extends Activity implements View.OnClickListener {
     private Button mButton1;
     private Button mButton2;
     private Button mButton3;
-
+    private Button mButton4;
+    private Button mButton5;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +34,12 @@ public class CatererEventList extends Activity implements View.OnClickListener {
         mButton1.setOnClickListener(this);
         mButton2 = (Button) findViewById(R.id.Caterer_DeleteEvent_button);
         mButton2.setOnClickListener(this);
-
+        mButton3 = (Button) findViewById(R.id.schedule_a_place_eventlist_page_button);
+        mButton3.setOnClickListener(this);
+        mButton4 = (Button) findViewById(R.id.assignStaff_eventlist_button);
+        mButton4.setOnClickListener(this);
+        mButton5 = (Button) findViewById(R.id.addResources_eventlist_button);
+        mButton5.setOnClickListener(this);
 
     }
 
@@ -72,7 +78,30 @@ public class CatererEventList extends Activity implements View.OnClickListener {
                dbh.DeleteEvent(data1);
                 Toast.makeText(CatererEventList.this,"Event "+data1+" is deleted",Toast.LENGTH_LONG).show();
                break;
-
+            case R.id.schedule_a_place_eventlist_page_button:
+                str = "1";
+                Intent intent2 = getIntent();
+                String data2 = intent2.getStringExtra("Event_Name");
+                intent2 = new Intent(CatererEventList.this, CatererSchedulePlaceForEvent.class);
+                intent2.putExtra("Event_Name_ToSchedulepage", data2);
+                startActivity(intent2);
+                break;
+            case R.id.assignStaff_eventlist_button:
+                str = "1";
+                Intent intent3 = getIntent();
+                String data3 = intent3.getStringExtra("Event_Name");
+                intent3 = new Intent(CatererEventList.this,AssignStaffToEvent.class);
+                intent3.putExtra("Event_Name_ToSchedulepage", data3);
+                startActivity(intent3);
+                break;
+            case R.id.addResources_eventlist_button:
+                str = "1";
+                Intent intent4 = getIntent();
+                String data4 = intent4.getStringExtra("Event_Name");
+                intent4 = new Intent(CatererEventList.this,AddResources.class);
+                intent4.putExtra("Event_Name_ToaddResourcespage", data4);
+                startActivity(intent4);
+                break;
         }
     }
 }

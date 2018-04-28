@@ -20,7 +20,7 @@ public class CatererFuctionList extends AppCompatActivity implements View.OnClic
         setContentView(R.layout.activity_caterer_fuction_list);
        // mButton1 = (Button) findViewById(R.id.CatererCreateEvent_button);
         mButton2 = (Button) findViewById(R.id.CatererViewEventCalendar_button);
-        mButton3 = (Button) findViewById(R.id.CaterFunctionList_Logout_button);
+        mButton3 = (Button) findViewById(R.id.CatererCreateEvent_button);
 
         //mButton1.setOnClickListener(this);
         mButton2.setOnClickListener(this);
@@ -32,14 +32,7 @@ public class CatererFuctionList extends AppCompatActivity implements View.OnClic
     {
         String str;
         switch (v.getId())
-        {  /*
-            case R.id.CatererCreateEvent_button:
-                str="1";
-                //////////
-                Intent intent=new Intent(CatererFuctionList.this,CatererEventList.class);
-                startActivity(intent);
-                break;
-                */
+        {
             case R.id.CatererViewEventCalendar_button:
                 str="1";
                 Intent intent1 = new Intent(CatererFuctionList.this,CatererPickUpDatePage.class);
@@ -47,7 +40,15 @@ public class CatererFuctionList extends AppCompatActivity implements View.OnClic
                 break;
 
         }
+        switch (v.getId())
+        {
+            case R.id.CatererViewEventCalendar_button:
+                str="1";
+                Intent intent_eventCreation = new Intent(CatererFuctionList.this,CatererEventCreation.class);
+                startActivity(intent_eventCreation);
+                break;
 
+        }
     }
 
 
