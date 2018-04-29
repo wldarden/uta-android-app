@@ -33,15 +33,11 @@ public class CatererFuctionList extends AppCompatActivity implements View.OnClic
         String str;
         switch (v.getId())
         {
-            case R.id.CatererViewEventCalendar_button:
+            case R.id.DatePickUpSubmmit_button:
                 str="1";
                 Intent intent1 = new Intent(CatererFuctionList.this,CatererPickUpDatePage.class);
                 startActivity(intent1);
                 break;
-
-        }
-        switch (v.getId())
-        {
             case R.id.CatererViewEventCalendar_button:
                 str="1";
                 Intent intent_eventCreation = new Intent(CatererFuctionList.this,CatererEventCreation.class);
