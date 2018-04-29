@@ -40,7 +40,7 @@ public class CatererFuctionList extends AppCompatActivity implements View.OnClic
                 break;
             case R.id.CatererViewEventCalendar_button:
                 str="1";
-                Intent intent_eventCreation = new Intent(CatererFuctionList.this,CatererEventCreation.class);
+                Intent intent_eventCreation = new Intent(CatererFuctionList.this,CatererCalendarEventView.class);
                 startActivity(intent_eventCreation);
                 break;
             case R.id.logout_button:

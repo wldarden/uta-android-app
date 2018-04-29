@@ -31,7 +31,9 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        android:layout_marginRight="142dp"
+        android:layout_marginLeft="143dp" />
 
     <TextView
         android:id="@+id/textView8"
@@ -41,10 +43,13 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="50dp"
         android:text="Meal Type"
+        android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        android:layout_marginRight="261dp"
+        android:layout_marginLeft="40dp" />
 
     <EditText
         android:id="@+id/addResources_mealtype_plaintext"
@@ -54,11 +59,13 @@
         android:layout_marginStart="40dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="meal type"
+        android:hint="breakfast,lunch,or dinner"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        android:layout_marginRight="129dp"
+        android:layout_marginLeft="40dp" />
 
     <TextView
         android:id="@+id/textView9"
@@ -68,10 +75,13 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="10dp"
         android:text="Food Venue "
+        android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addResources_mealtype_plaintext" />
+        app:layout_constraintTop_toBottomOf="@+id/addResources_mealtype_plaintext"
+        android:layout_marginRight="244dp"
+        android:layout_marginLeft="40dp" />
 
     <EditText
         android:id="@+id/addResources_foodvenue_plaintext"
@@ -82,10 +92,12 @@
         android:layout_marginTop="1dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="food venue"
+        android:hint="food venue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        android:layout_marginRight="129dp"
+        android:layout_marginLeft="40dp" />
 
     <TextView
         android:id="@+id/textView10"
@@ -95,10 +107,13 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="10dp"
         android:text="Meal Formality"
+        android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addResources_foodvenue_plaintext" />
+        app:layout_constraintTop_toBottomOf="@+id/addResources_foodvenue_plaintext"
+        android:layout_marginRight="225dp"
+        android:layout_marginLeft="40dp" />
 
     <EditText
         android:id="@+id/addResources_mealformality_plaintext"
@@ -109,10 +124,12 @@
         android:layout_marginTop="1dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="meal formality"
+        android:hint="formal or informal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        android:layout_marginRight="130dp"
+        android:layout_marginLeft="40dp" />
 
     <TextView
         android:id="@+id/textView11"
@@ -122,10 +139,13 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="10dp"
         android:text="Drink Venue"
+        android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addResources_mealformality_plaintext" />
+        app:layout_constraintTop_toBottomOf="@+id/addResources_mealformality_plaintext"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="286dp" />
 
     <EditText
         android:id="@+id/addResources_dringkvenue_plaintext"
@@ -136,10 +156,12 @@
         android:layout_marginTop="1dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="drink venue"
+        android:hint="standard or alcohol"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        android:layout_marginRight="129dp"
+        android:layout_marginLeft="40dp" />
 
     <Button
         android:id="@+id/addResources_addpage_button"
