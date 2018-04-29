@@ -11,6 +11,7 @@ public class CatererPickUpDatePage extends AppCompatActivity implements View.OnC
 
 
     private Button submit;
+    private Button logout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -18,7 +19,8 @@ public class CatererPickUpDatePage extends AppCompatActivity implements View.OnC
         setContentView(R.layout.activity_caterer_pick_up_date_page);
         submit = (Button)findViewById(R.id.DatePickUpSubmmit_button);
         submit.setOnClickListener(this);
-
+        logout = (Button)findViewById(R.id.logout_button);
+        logout.setOnClickListener(this);
     }
 
 
