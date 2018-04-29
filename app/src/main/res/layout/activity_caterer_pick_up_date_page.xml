@@ -38,6 +38,7 @@
         android:layout_marginStart="56dp"
         android:layout_marginTop="82dp"
         android:text="Please enter date "
+        android:textColor="@android:color/black"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,8 +53,10 @@
         android:layout_marginTop="50dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="yyyy-mm-dd"
+        android:hint="mm-dd-yy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CatererPickUpDate_textView" />
+        app:layout_constraintTop_toBottomOf="@+id/CatererPickUpDate_textView"
+        android:layout_marginLeft="56dp"
+        android:layout_marginRight="113dp" />
 </android.support.constraint.ConstraintLayout>
