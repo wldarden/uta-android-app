@@ -373,12 +373,22 @@ public class viewmyevents extends AppCompatActivity {
         GoToHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(viewmyevents.this, Userhome.class);
-                Bundle bundle = new Bundle();
-                bundle.putString("LOGINID", usr);
-                bundle.putString("ROLE", usrRole);
-                intent.putExtras(bundle);
-                startActivity(intent);
+                if (usrRole.equals("catStaff")) {
+                    Intent intent = new Intent(viewmyevents.this, activity_caterer_staff_homepage.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("LOGINID", usr);
+                    bundle.putString("ROLE", usrRole);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                } else {
+                    Intent intent = new Intent(viewmyevents.this, Userhome.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("LOGINID", usr);
+                    bundle.putString("ROLE", usrRole);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                }
+
             }
         });
 
