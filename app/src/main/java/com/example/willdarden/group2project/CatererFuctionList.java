@@ -38,11 +38,6 @@ public class CatererFuctionList extends AppCompatActivity implements View.OnClic
                 Intent intent1 = new Intent(CatererFuctionList.this,CatererPickUpDatePage.class);
                 startActivity(intent1);
                 break;
-            case R.id.CatererViewEventCalendar_button:
-                str="1";
-                Intent intent_eventCreation = new Intent(CatererFuctionList.this,CatererEventCreation.class);
-                startActivity(intent_eventCreation);
-                break;
             case R.id.logout_button:
                 str="1";
                 Intent intent5 = new Intent(CatererFuctionList.this,LoginScreen.class);
