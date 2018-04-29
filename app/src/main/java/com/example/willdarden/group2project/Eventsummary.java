@@ -13,6 +13,7 @@ public class Eventsummary extends AppCompatActivity {
     DatabaseHelper helper = new DatabaseHelper(this);
     Button GoToHomePage;
     Button CancelEvent;
+    Button GoToLogout;
 
     TextView eventnamedisp,
             partysizedisp,
@@ -86,6 +87,16 @@ public class Eventsummary extends AppCompatActivity {
                     startActivity(intent);
                 }
 
+            }
+        });
+
+        GoToLogout = findViewById(R.id.log_out);
+        GoToLogout = findViewById(R.id.log_out);
+        GoToLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent4 = new Intent(Eventsummary.this, LoginScreen.class);
+                startActivity(intent4);
             }
         });
 
