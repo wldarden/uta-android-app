@@ -14,6 +14,7 @@ public class EventNameEnterPage extends AppCompatActivity  implements View.OnCli
 
 
     private Button createDatabase;
+    private Button logoutButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -22,6 +23,8 @@ public class EventNameEnterPage extends AppCompatActivity  implements View.OnCli
         setContentView(R.layout.activity_event_name_enter_page);
         createDatabase = (Button)findViewById(R.id.gobutton);
         createDatabase.setOnClickListener(this);
+        logoutButton = (Button)findViewById(R.id.logout_button);
+        logoutButton.setOnClickListener(this);
 
     }
 
@@ -41,7 +44,11 @@ public class EventNameEnterPage extends AppCompatActivity  implements View.OnCli
                 intent.putExtra("Event_Name", data);
                 startActivity(intent);
                 break;
-
+            case R.id.logout_button:
+                str="1";
+                Intent intent5 = new Intent(EventNameEnterPage.this,LoginScreen.class);
+                startActivity(intent5);
+                break;
         }
 
     }

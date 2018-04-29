@@ -18,11 +18,11 @@ public class CatererFuctionList extends AppCompatActivity implements View.OnClic
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_caterer_fuction_list);
-       // mButton1 = (Button) findViewById(R.id.CatererCreateEvent_button);
+        mButton1 = (Button) findViewById(R.id.logout_button);
         mButton2 = (Button) findViewById(R.id.CatererViewEventCalendar_button);
         mButton3 = (Button) findViewById(R.id.CatererCreateEvent_button);
 
-        //mButton1.setOnClickListener(this);
+        mButton1.setOnClickListener(this);
         mButton2.setOnClickListener(this);
         mButton3.setOnClickListener(this);
         db.getReadableDatabase();

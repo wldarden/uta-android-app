@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 public class CatererEventCreation extends AppCompatActivity implements View.OnClickListener {
     private Button Create;
+    private Button logoutButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +21,8 @@ public class CatererEventCreation extends AppCompatActivity implements View.OnCl
 
         Create = (Button)findViewById(R.id.EventCreation_Create_button);
         Create.setOnClickListener(this);
-
+        logoutButton = (Button)findViewById(R.id.logout_button);
+        logoutButton.setOnClickListener(this);
     }
 
     @Override
