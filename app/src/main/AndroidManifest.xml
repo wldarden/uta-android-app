@@ -24,6 +24,7 @@
         <activity android:name=".update_profile" />
         <activity android:name=".activity_caterer_staff_homepage" />
         <activity android:name=".admin_home_screen" />
+        <activity android:name=".CatererEventCreation" />
         <activity android:name=".activity_event_list" />
         <activity android:name=".activity_update_profile" />
         <activity android:name=".CaterHomepage"/>

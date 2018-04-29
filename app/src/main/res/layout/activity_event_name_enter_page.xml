@@ -62,7 +62,7 @@
         app:layout_constraintTop_toBottomOf="@+id/EnterEventName_enterpage_plaintext" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/logout_button"
         android:layout_width="88dp"
         android:layout_height="48dp"
         android:layout_marginEnd="158dp"

@@ -17,6 +17,7 @@ public class CatererEventList extends Activity implements View.OnClickListener {
     private Button mButton3;
     private Button mButton4;
     private Button mButton5;
+    private Button mButton6;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +41,8 @@ public class CatererEventList extends Activity implements View.OnClickListener {
         mButton4.setOnClickListener(this);
         mButton5 = (Button) findViewById(R.id.addResources_eventlist_button);
         mButton5.setOnClickListener(this);
+        mButton6 = (Button) findViewById(R.id.logout_button);
+        mButton6.setOnClickListener(this);
 
     }
 
