@@ -143,11 +143,44 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         sqliteDB = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
+
+        switch (MealFormality){
+
+            case "informal":
+                values.put(Cater8_MealFormality,MealFormality);
+                 switch (MealType) {
+                      case "lunch" :values.put(Cater11_Cost, "$12/person");break;
+
+                      case "breakfast":values.put(Cater11_Cost, "$8/person");break;
+                      case "dinner":values.put(Cater11_Cost, "$18/person");break;
+
+                        }
+            case "formal":
+                values.put(Cater8_MealFormality,MealFormality);
+                switch (MealType) {
+                    case "lunch" :values.put(Cater11_Cost, "$18/person");break;
+
+                    case "breakfast":values.put(Cater11_Cost, "$12/person");break;
+                    case "dinner":values.put(Cater11_Cost, "$27/person");break;
+
+                }
+
+
+        }
         //values.put(Cater1_EventName , EventName);
         values.put(Cater6_MealType,MealType);
         values.put(Cater7_MealVenue,FoodVenue);
-        values.put(Cater8_MealFormality,MealFormality);
-        values.put(Cater9_DrinkVenue,DrinkVenue);
+       // values.put(Cater8_MealFormality,MealFormality);
+
+
+        switch (DrinkVenue) {
+            case "standard" :values.put(Cater9_DrinkVenue,DrinkVenue);break;
+
+            case "alcohol":values.put(Cater9_DrinkVenue,DrinkVenue+"($15/person)");break;
+
+        }
+       // values.put(Cater9_DrinkVenue,DrinkVenue);
+
 
 
         int i = sqliteDB.update("EVENTREQUESTS",values,"EventName=?",new String[]{EventName});
