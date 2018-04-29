@@ -33,7 +33,7 @@ public class Eventsummary extends AppCompatActivity {
         assert bundle != null;
         final String recd_event_name = bundle.getString("evname");
         final String usr = bundle.getString("LOGINID");
-
+        final String usrRole = bundle.getString("ROLE");
         String [] summary = helper.getEventSummary(recd_event_name);
 
         for ( int i = 0 ; i < summary.length ; i++ ){
@@ -72,11 +72,20 @@ public class Eventsummary extends AppCompatActivity {
         GoToHomePage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Eventsummary.this, Userhome.class);
-                Bundle bundle = new Bundle();
-                bundle.putString("LOGINID", usr);
-                intent.putExtras(bundle);
-                startActivity(intent);
+                if (usrRole == "catStaff") {
+                    Intent intent = new Intent(Eventsummary.this, activity_caterer_staff_homepage.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("LOGINID", usr);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                } else {
+                    Intent intent = new Intent(Eventsummary.this, Userhome.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("LOGINID", usr);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                }
+
             }
         });
 

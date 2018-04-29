@@ -65,6 +65,7 @@ public class viewmyevents extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         assert bundle != null;
         final String usr = bundle.getString("LOGINID");
+        final String usrRole = bundle.getString("ROLE");
         final String recd_function = bundle.getString("function");
 
        // vmedisp = findViewById(R.id.vieweventstable);
@@ -226,6 +227,7 @@ public class viewmyevents extends AppCompatActivity {
                 String getrec = r1c1.getText().toString();
                 Bundle bundle = new Bundle();
                 bundle.putString("LOGINID", usr);
+                bundle.putString("ROLE", usrRole);
                 bundle.putString("evname", getrec);
                 intent.putExtras(bundle);
                 startActivity(intent);
@@ -240,6 +242,7 @@ public class viewmyevents extends AppCompatActivity {
                 String getrec = r2c1.getText().toString();
                 Bundle bundle = new Bundle();
                 bundle.putString("LOGINID", usr);
+                bundle.putString("ROLE", usrRole);
                 bundle.putString("evname", getrec);
                 intent.putExtras(bundle);
                 startActivity(intent);
@@ -254,6 +257,7 @@ public class viewmyevents extends AppCompatActivity {
                 String getrec = r3c1.getText().toString();
                 Bundle bundle = new Bundle();
                 bundle.putString("LOGINID", usr);
+                bundle.putString("ROLE", usrRole);
                 bundle.putString("evname", getrec);
                 intent.putExtras(bundle);
                 startActivity(intent);
@@ -268,6 +272,7 @@ public class viewmyevents extends AppCompatActivity {
                 String getrec = r4c1.getText().toString();
                 Bundle bundle = new Bundle();
                 bundle.putString("LOGINID", usr);
+                bundle.putString("ROLE", usrRole);
                 bundle.putString("evname", getrec);
                 intent.putExtras(bundle);
                 startActivity(intent);
@@ -282,6 +287,7 @@ public class viewmyevents extends AppCompatActivity {
                 String getrec = r5c1.getText().toString();
                 Bundle bundle = new Bundle();
                 bundle.putString("LOGINID", usr);
+                bundle.putString("ROLE", usrRole);
                 bundle.putString("evname", getrec);
                 intent.putExtras(bundle);
                 startActivity(intent);
@@ -296,6 +302,7 @@ public class viewmyevents extends AppCompatActivity {
                 String getrec = r6c1.getText().toString();
                 Bundle bundle = new Bundle();
                 bundle.putString("LOGINID", usr);
+                bundle.putString("ROLE", usrRole);
                 bundle.putString("evname", getrec);
                 intent.putExtras(bundle);
                 startActivity(intent);
@@ -310,6 +317,7 @@ public class viewmyevents extends AppCompatActivity {
                 String getrec = r7c1.getText().toString();
                 Bundle bundle = new Bundle();
                 bundle.putString("LOGINID", usr);
+                bundle.putString("ROLE", usrRole);
                 bundle.putString("evname", getrec);
                 intent.putExtras(bundle);
                 startActivity(intent);
@@ -324,6 +332,7 @@ public class viewmyevents extends AppCompatActivity {
                 String getrec = r8c1.getText().toString();
                 Bundle bundle = new Bundle();
                 bundle.putString("LOGINID", usr);
+                bundle.putString("ROLE", usrRole);
                 bundle.putString("evname", getrec);
                 intent.putExtras(bundle);
                 startActivity(intent);
@@ -338,6 +347,7 @@ public class viewmyevents extends AppCompatActivity {
                 String getrec = r9c1.getText().toString();
                 Bundle bundle = new Bundle();
                 bundle.putString("LOGINID", usr);
+                bundle.putString("ROLE", usrRole);
                 bundle.putString("evname", getrec);
                 intent.putExtras(bundle);
                 startActivity(intent);
@@ -352,6 +362,7 @@ public class viewmyevents extends AppCompatActivity {
                 String getrec = r10c1.getText().toString();
                 Bundle bundle = new Bundle();
                 bundle.putString("LOGINID", usr);
+                bundle.putString("ROLE", usrRole);
                 bundle.putString("evname", getrec);
                 intent.putExtras(bundle);
                 startActivity(intent);
@@ -365,6 +376,7 @@ public class viewmyevents extends AppCompatActivity {
                 Intent intent = new Intent(viewmyevents.this, Userhome.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("LOGINID", usr);
+                bundle.putString("ROLE", usrRole);
                 intent.putExtras(bundle);
                 startActivity(intent);
             }

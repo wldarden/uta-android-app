@@ -35,6 +35,7 @@ public class activity_caterer_staff_homepage extends AppCompatActivity {
                 Bundle bundle = new Bundle();
                 bundle.putString("function", args);
                 bundle.putString("LOGINID", userName);
+                bundle.putString("ROLE", "catStaff");
                 intent.putExtras(bundle);
                 startActivity(intent);
             }
