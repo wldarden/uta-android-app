@@ -39,7 +39,7 @@ public class EventDetailPage extends AppCompatActivity
             int i;
             String Infoname[]=new String[]{"Event Name: ","Party Size: ","Event Date: ",
                     "Event Time: ","Event Duration(hour): ","Meal Type: ", "Meal Venue: ", "Meal Formality: ","Drink Venue: ",
-                    "Venue: ","Cost(dollar/per person): ","Number of Staff: "};
+                    "Venue: ","Cost(dollar/per person): ","Staff Name: "};
 
             for (i=0;i<12;i++)
             {

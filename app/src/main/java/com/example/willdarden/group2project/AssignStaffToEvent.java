@@ -55,7 +55,7 @@ private Button Assign;
 
                 dbh3.updateStaffNumber(staff_EventName,staff_StaffNum);
 
-                Toast.makeText(AssignStaffToEvent.this,staff_StaffNum+" staff members are assigned",Toast.LENGTH_LONG).show();
+                Toast.makeText(AssignStaffToEvent.this,staff_StaffNum+" is assigned",Toast.LENGTH_LONG).show();
                 break;
         }
 
