@@ -102,6 +102,12 @@ public class CatererEventList extends Activity implements View.OnClickListener {
                 intent4.putExtra("Event_Name_ToaddResourcespage", data4);
                 startActivity(intent4);
                 break;
+            case R.id.logout_button:
+                str="1";
+                Intent intent5 = new Intent(CatererEventList.this,LoginScreen.class);
+                startActivity(intent5);
+                break;
+
         }
     }
 }

@@ -45,7 +45,7 @@
         app:layout_constraintTop_toBottomOf="@+id/schedule_a_place_eventlist_page_button" />
 
     <Button
-        android:id="@+id/logout_homepage_button"
+        android:id="@+id/logout_button"
         android:layout_width="88dp"
         android:layout_height="48dp"
         android:layout_marginBottom="4dp"

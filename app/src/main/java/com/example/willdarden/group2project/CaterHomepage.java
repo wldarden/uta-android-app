@@ -49,7 +49,11 @@ DatabaseHelper db =new DatabaseHelper(this);
                 Intent intent1 = new Intent(CaterHomepage.this,CatererFuctionList.class);
                 startActivity(intent1);
                 break;
-
+            case R.id.logout_homepage_button:
+                str="1";
+                Intent intent2 = new Intent(CaterHomepage.this,LoginScreen.class);
+                startActivity(intent2);
+                break;
         }
 
     }

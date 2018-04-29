@@ -66,7 +66,11 @@ public class CatererSchedulePlaceForEvent extends AppCompatActivity implements V
                 break;
 
 
-
+            case R.id.logout_button:
+                str="1";
+                Intent intent99 = new Intent(CatererSchedulePlaceForEvent.this,LoginScreen.class);
+                startActivity(intent99);
+                break;
 
 
         }

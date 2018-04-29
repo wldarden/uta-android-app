@@ -39,6 +39,11 @@ public class CatererPickUpDatePage extends AppCompatActivity implements View.OnC
                 intent.putExtra("Event_Date", date_data);
                 startActivity(intent);
                 break;
+            case R.id.logout_button:
+                str="1";
+                Intent intent5 = new Intent(CatererPickUpDatePage.this,LoginScreen.class);
+                startActivity(intent5);
+                break;
 
 
         }

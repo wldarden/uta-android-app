@@ -47,7 +47,11 @@ public class CatererEventCreation extends AppCompatActivity implements View.OnCl
 
                 Toast.makeText(CatererEventCreation.this,"Hall "+data_HallName+" is assigned",Toast.LENGTH_LONG).show();
                 break;
-
+            case R.id.logout_button:
+                str="1";
+                Intent intent2 = new Intent(CatererEventCreation.this,LoginScreen.class);
+                startActivity(intent2);
+                break;
 
 
 
