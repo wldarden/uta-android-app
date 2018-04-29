@@ -5,23 +5,17 @@ package com.example.willdarden.group2project;
  */
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class activity_caterer_staff_homepage extends AppCompatActivity {
 
     Button GoToViewEvents;
+    Button GoToUpdateProfile;
+    Button GoToLogout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +37,24 @@ public class activity_caterer_staff_homepage extends AppCompatActivity {
                 bundle.putString("LOGINID", userName);
                 intent.putExtras(bundle);
                 startActivity(intent);
+            }
+        });
+
+        GoToUpdateProfile = findViewById(R.id.CatererStaffProfileBtn);
+        GoToUpdateProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent4 = new Intent(activity_caterer_staff_homepage.this, update_profile.class);
+                startActivity(intent4);
+            }
+        });
+
+        GoToLogout = findViewById(R.id.LogoutBtn);
+        GoToLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent4 = new Intent(activity_caterer_staff_homepage.this, LoginScreen.class);
+                startActivity(intent4);
             }
         });
     }

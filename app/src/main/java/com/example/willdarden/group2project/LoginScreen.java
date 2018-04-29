@@ -52,6 +52,11 @@ public class LoginScreen extends AppCompatActivity implements AdapterView.OnItem
                     Intent intent = new Intent(LoginScreen.this, CaterHomepage.class);
                     intent.putExtra("LOGINID", LoginId_Str);
                     startActivity(intent);
+                } else if (userRoleSelected.equals("User")) {
+                    Intent intent = new Intent(LoginScreen.this, Userhome.class);
+                    intent.putExtra("LOGINID", LoginId_Str);
+//                intent.putExtra("ROLE", userRoleSelected);
+                    startActivity(intent);
                 }
             }
             else{

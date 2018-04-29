@@ -1,4 +1,4 @@
-package com.caterapp.caterapp;
+package com.example.willdarden.group2project;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
@@ -30,6 +30,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             "EmailId text not null , "+
             "PhoneNumber text not null , "+
             "Password text not null);";
+
+    // caterer part start
+
+    private static final String Cater1_EventName = "EventName";
+    private static final String Cater2_PartySize = "PartySize";
+    private static final String Cater3_EventDate = "EventDate";
+    private static final String Cater4_EventTime = "EventTime";
+    private static final String Cater5_EventDuration = "EventDuration";
+    private static final String Cater6_MealType = "MealType";
+    private static final String Cater7_MealVenue = "MealVenue";
+    private static final String Cater8_MealFormality = "MealFormality";
+    private static final String Cater9_DrinkVenue = "DrinkVenue";
+    private static final String Cater10_Venue = "Venue";
+    private static final String Cater11_Cost = "Cost";
+    private static final String Cater12_Staff = "Staff";
+    private static final String Cater13_Username = "Username";
+// caterer part end
 
     private static final String USER_TABLE_NAME = "EVENTREQUESTS";
     private static final String COL1_EventName = "EventName";
@@ -72,6 +89,55 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         this.sqliteDB = sqLiteDatabase;
     }
 
+    public boolean updateStaffNumber(String EventName,String StaffNum){
+        sqliteDB = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(Cater12_Staff, StaffNum);
+
+
+        int i = sqliteDB.update("EVENTREQUESTS",values,"EventName=?",new String[]{EventName});
+        if(i==1){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+    //Caterer Find Specific Event by entering event name
+    public Cursor findeventinfo(String data){
+        sqliteDB = this.getWritableDatabase();
+        String sql = "SELECT EventName, PartySize ,EventDate,EventTime ,EventDuration,MealType ,MealVenue,MealFormality,DrinkVenue,Venue,Cost,Staff FROM  EVENTREQUESTS" + " WHERE EventName = '"+data+"'";
+        Cursor  cur = sqliteDB.rawQuery(sql,null);
+        return  cur;
+    }
+
+    public boolean updateHallName(String EventName,String HallName){
+        sqliteDB = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(Cater10_Venue, HallName);
+
+
+        int i = sqliteDB.update("EVENTREQUESTS",values,"EventName=?",new String[]{EventName});
+        if(i==1){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
+    public Cursor findeventinfo_Calendar(String data){
+        sqliteDB = this.getWritableDatabase();
+        String sql = "SELECT EventName, EventTime, Venue FROM  EVENTREQUESTS" + " WHERE EventDate = '"+data+"'";
+        Cursor  cur = sqliteDB.rawQuery(sql,null);
+        return  cur;
+    }
+    public void DeleteEvent(String id){
+        sqliteDB = this.getWritableDatabase();
+        sqliteDB.delete("EVENTREQUESTS", "EventName=?", new String[]{id});
+
+    }
+
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         String checkQuery = "DROP TABLE IF EXISTS "+TABLE_NAME;
@@ -98,6 +164,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }while(curs.moveToNext());
         }
         return PasswordChk;
+    }
+
+    public boolean CatererAddResources(String EventName, String MealType , String FoodVenue, String MealFormality, String DrinkVenue){
+        sqliteDB = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        //values.put(Cater1_EventName , EventName);
+        values.put(Cater6_MealType,MealType);
+        values.put(Cater7_MealVenue,FoodVenue);
+        values.put(Cater8_MealFormality,MealFormality);
+        values.put(Cater9_DrinkVenue,DrinkVenue);
+
+
+        int i = sqliteDB.update("EVENTREQUESTS",values,"EventName=?",new String[]{EventName});
+        if(i==1){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     public boolean insertContact(String loginid , String username , String role , String email , String phone , String password){
