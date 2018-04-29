@@ -14,6 +14,7 @@
         android:layout_marginStart="70dp"
         android:layout_marginTop="40dp"
         android:text="@string/caterer_event_list_fuctionpage"
+        android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

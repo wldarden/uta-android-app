@@ -11,11 +11,10 @@
         android:layout_width="200dp"
         android:layout_height="73dp"
         android:layout_marginEnd="168dp"
-        android:layout_marginRight="168dp"
         android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/caterer_event_list_enterpage"
+        android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,14 +25,15 @@
         android:layout_width="216dp"
         android:layout_height="24dp"
         android:layout_marginEnd="136dp"
-        android:layout_marginRight="136dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="144dp"
         android:text="@string/enter_an_event_to_continue"
+        android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="16dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="136dp" />
 
     <EditText
         android:id="@+id/EnterEventName_enterpage_plaintext"
@@ -43,7 +43,7 @@
         android:layout_marginTop="32dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/event_name"
+        android:hint="@string/event_name"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Enter_an_event_to_continue_enter_page_text_view" android:layout_marginStart="24dp" />
 
